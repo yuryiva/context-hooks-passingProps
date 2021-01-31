@@ -7,10 +7,10 @@ const Section4 = (props) => {
       <hr />
       SECTION 4
       <Section5
-        name={props.name}
-        age={props.age}
-        add={props.add}
-        subtract={props.subtract}
+        // name={props.name}
+        // age={props.age}
+        // add={props.add}
+        // subtract={props.subtract}
       />
       <hr />
     </div>
