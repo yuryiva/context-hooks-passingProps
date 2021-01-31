@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import Section1 from "./components/Section1";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    name: "JOHN",
+    age: 33,
+  };
+
+  addAction = () => {
+    this.setState({
+      age: this.state.age + 1,
+    });
+  };
+
+  subtractAction = () => {
+    this.setState({
+      age: this.state.age - 1,
+    });
+  };
+
+  render() {
+    return (
+      <Section1
+        name={this.state.name}
+        age={this.state.age}
+        add={this.addAction}
+        subtract={this.subtractAction}
+      />
+    );
+  }
 }
 
 export default App;
