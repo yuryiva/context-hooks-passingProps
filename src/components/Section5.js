@@ -1,4 +1,6 @@
 import React from "react";
+// This component will be consuming our context 
+// so we need to import it in order to use it
 import { MyContext } from "./context/MyProvider";
 
 // const Section5 = (props) => {
@@ -14,6 +16,12 @@ import { MyContext } from "./context/MyProvider";
 //     </div>
 //   );
 // };
+
+
+// This component will be wrapped in our context.
+// Consumer so we have access to the global state and methods declared there.
+// It only accepts a child a function that will return some html,
+// this function has as an argument the value of our consumer (which stores the state and our methods)
 
 const Section5 = () => (
   <MyContext.Consumer>
